@@ -1,0 +1,12 @@
+version: "2"
+services:
+  node:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./app:/app
+    expose:
+      - "8080"
