@@ -12,6 +12,25 @@ let getFormattedPercentage = (number, total) => {
     return String(Number(percentage * 100).toFixed(1)) + '%';
 };
 
+let displayErrors = (fundList) => {
+    if (fundList.length > 0) {
+        console.log("\n");
+        for (let fund of fundList) {
+            console.error("WARNING: COULD NOT FIND CONFIGURATION DATA FOR " + fund);
+        }
+    }
+};
+
+let displayResults = (result, total) => {
+    for (let [propertyType, propertyData] of Object.entries(result)) {
+        console.info("\n" + propertyType + "\n" + new Array(propertyType.length + 1).join("-"));
+
+        for (let [propertyName, propertyAmount] of Object.entries(propertyData)) {
+            console.log(propertyName + ": " + getFormattedPercentage(propertyAmount, total) + "\t\t(" + Number(propertyAmount).toFixed(2) + " of " + Number(total).toFixed(2) + ")");
+        }
+    }
+};
+
 let summarizeFunction = (portfolio, options) => {
     let portfolioPath = path.resolve(portfolio);
     let configPath = path.resolve(options.config);
@@ -25,6 +44,7 @@ let summarizeFunction = (portfolio, options) => {
         let input = fs.readFileSync(portfolioPath, {encoding: 'utf8'});
         let records = csvparse(input, {comment: '#', columns: true});
 
+        // sum up all the entries from the portfolio
         for (let a = 0; a < records.length; a++) {
             if (typeof(records[a].fund) !== 'undefined') {
                 if (typeof(portfolioSummary[records[a].fund]) === 'undefined') {
@@ -36,13 +56,11 @@ let summarizeFunction = (portfolio, options) => {
         }
     }
 
-    // convert to iterable pairs
-    portfolioSummary = Object.entries(portfolioSummary);
-
+    // create a result set from a combination of portfolio and property config
     if (fs.existsSync(configPath)) {
         let fundProperties = require(configPath);
 
-        for (let [fund, amount] of portfolioSummary) {
+        for (let [fund, amount] of Object.entries(portfolioSummary)) {
             total += parseFloat(amount);
 
             if (typeof(fundProperties[fund]) !== 'undefined') {
@@ -69,20 +87,8 @@ let summarizeFunction = (portfolio, options) => {
         }
     }
 
-    for (let [propertyType, propertyData] of Object.entries(result)) {
-        console.info("\n" + propertyType + "\n" + new Array(propertyType.length + 1).join("-"));
-
-        for (let [propertyName, propertyAmount] of Object.entries(propertyData)) {
-            console.log(propertyName + ": " + getFormattedPercentage(propertyAmount, total) + "\t\t(" + Number(propertyAmount).toFixed(2) + " of " + Number(total).toFixed(2) + ")");
-        }
-    }
-
-    if (noFundDataList.length > 0) {
-        console.log("\n");
-        for (let fund of noFundDataList) {
-            console.error("WARNING: COULD NOT FIND CONFIGURATION DATA FOR " + fund);
-        }
-    }
+    displayResults(result, total);
+    displayErrors(noFundDataList);
 
     console.log("\n");
 };
