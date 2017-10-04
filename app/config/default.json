@@ -1,0 +1,24 @@
+{
+  "VTSMX": {
+    "Asset Allocation": {
+      "large": ".71",
+      "mid": ".20",
+      "small": ".09"
+    }
+  },
+  "VLACX": {
+    "Asset Allocation": {
+      "large": ".83",
+      "mid": ".17"
+    }
+  },
+  "VFIFX": {
+    "Asset Allocation": {
+      "large": ".3834",
+      "mid": ".108",
+      "small": ".0486",
+      "intl": ".36",
+      "bond": ".10"
+    }
+  }
+}

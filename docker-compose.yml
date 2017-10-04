@@ -1,6 +1,6 @@
 version: "2"
 services:
-  node:
+  fund-property-aggregator:
     build:
       context: .
       dockerfile: docker/node/Dockerfile
@@ -8,5 +8,3 @@ services:
       - NODE_ENV=production
     volumes:
       - ./app:/app
-    expose:
-      - "8080"
