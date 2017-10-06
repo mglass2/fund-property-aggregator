@@ -1,9 +1,45 @@
+//CHECK THESE PERIODICALLY, THEY MAY CHANGE
 {
   "VTSMX": {
     "Asset Allocation": {
       "large": ".71",
       "mid": ".20",
       "small": ".09"
+    }
+  },
+  "VLCAX": {
+    "Asset Allocation": {
+      "large": ".8338",
+      "mid": ".1653",
+      "small": ".0009"
+    }
+  },
+  "VGSIX": {
+    "Asset Allocation": {
+      "large": ".2954",
+      "mid": ".4895",
+      "small": ".2151"
+    }
+  },
+  "VIMAX": {
+    "Asset Allocation": {
+      "large": ".1307",
+      "mid": ".8638",
+      "small": ".0055"
+    }
+  },
+  "NAESX": {
+    "Asset Allocation": {
+      "large": ".0013",
+      "mid": ".4188",
+      "small": ".5799"
+    }
+  },
+  "VIIIX": {
+    "Asset Allocation": {
+      "large": ".8557",
+      "mid": ".1435",
+      "small": ".0008"
     }
   },
   "VLACX": {

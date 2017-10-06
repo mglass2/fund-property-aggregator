@@ -108,3 +108,9 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+app/portfolio/*
+!app/portfolio/portfolio.csv
+
+app/config/*
+!app/config/default.json
