@@ -1,60 +1,82 @@
-//CHECK THESE PERIODICALLY, THEY MAY CHANGE
 {
   "VTSMX": {
     "Asset Allocation": {
-      "large": ".71",
-      "mid": ".20",
-      "small": ".09"
+      "large": ".7162",
+      "mid": ".1914",
+      "small": ".0924"
+    }
+  },
+  "VTSAX": {
+    "Asset Allocation": {
+      "large": ".7162",
+      "mid": ".1914",
+      "small": ".0924"
     }
   },
   "VLCAX": {
     "Asset Allocation": {
-      "large": ".8338",
-      "mid": ".1653",
-      "small": ".0009"
+      "large": ".8430",
+      "mid": ".1567",
+      "small": ".0003"
     }
   },
   "VGSIX": {
     "Asset Allocation": {
-      "large": ".2954",
-      "mid": ".4895",
-      "small": ".2151"
+      "large": ".3226",
+      "mid": ".4610",
+      "small": ".2164"
     }
   },
   "VIMAX": {
     "Asset Allocation": {
-      "large": ".1307",
-      "mid": ".8638",
-      "small": ".0055"
+      "large": ".1331",
+      "mid": ".8653",
+      "small": ".0016"
     }
   },
   "NAESX": {
     "Asset Allocation": {
-      "large": ".0013",
-      "mid": ".4188",
-      "small": ".5799"
+      "large": ".0012",
+      "mid": ".4407",
+      "small": ".5581"
     }
   },
   "VIIIX": {
     "Asset Allocation": {
-      "large": ".8557",
-      "mid": ".1435",
-      "small": ".0008"
+      "large": ".8661",
+      "mid": ".1330",
+      "small": ".0009"
     }
   },
   "VLACX": {
     "Asset Allocation": {
-      "large": ".83",
-      "mid": ".17"
+      "large": ".843",
+      "mid": ".1567",
+      "small": ".0003"
     }
   },
   "VFIFX": {
     "Asset Allocation": {
-      "large": ".3834",
-      "mid": ".108",
-      "small": ".0486",
-      "intl": ".36",
-      "bond": ".10"
+      "large": ".3881",
+      "mid": ".1037",
+      "small": ".0500",
+      "intl": ".3590",
+      "bond": ".0990"
+    }
+  },
+  "VGTSX": {
+    "Asset Allocation": {
+      "intl": "1.00"
+    }
+  },
+  "CMCSA": {
+    "Asset Allocation": {
+      "large": "1.00"
+    }
+  },
+  "GM": {
+    "Asset Allocation": {
+      "large": "1.00"
     }
   }
 }
